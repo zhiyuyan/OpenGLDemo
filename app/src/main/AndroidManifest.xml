@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HelloWorld"
+            android:label="Hello world">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="intent.category.opengl.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
