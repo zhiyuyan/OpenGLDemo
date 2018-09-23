@@ -21,9 +21,20 @@
             android:label="Hello world">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="intent.category.opengl.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DrawPointActivity"
+            android:label="Draw Point">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="intent.category.opengl.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OpenGLESActivity"></activity>
     </application>
 
 </manifest>
