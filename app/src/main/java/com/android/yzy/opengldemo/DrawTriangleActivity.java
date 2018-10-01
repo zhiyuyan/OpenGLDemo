@@ -7,6 +7,8 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
+ * 绘制三角形
+ *
  * Created by yzy on 2018/10/1.
  */
 
