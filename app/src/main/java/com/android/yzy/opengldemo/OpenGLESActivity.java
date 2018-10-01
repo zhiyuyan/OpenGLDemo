@@ -24,7 +24,7 @@ public class OpenGLESActivity extends Activity implements IOpenGLDemo {
     }
 
     @Override
-    public void DrawScene(GL10 gl) {
+    public void drawScene(GL10 gl) {
         gl.glClearColor(0f, 0f, 0f, 0f);
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     }

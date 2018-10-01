@@ -35,7 +35,7 @@ public class OpenGLRenderer implements Renderer {
 
 	public void onDrawFrame(GL10 gl) {
 		if(openGLDemo!=null){
-			openGLDemo.DrawScene(gl);
+			openGLDemo.drawScene(gl);
 		}
 
 	}

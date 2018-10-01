@@ -23,7 +23,7 @@ public class HelloWorld extends Activity implements IOpenGLDemo{
    		setContentView(mGLSurfaceView);
     }
 
-	public void DrawScene(GL10 gl) {
+	public void drawScene(GL10 gl) {
 		gl.glClearColor(1.0f, 0.0f, 0.0f, 0.0f);	
 		// Clears the screen and depth buffer.
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);

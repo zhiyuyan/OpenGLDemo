@@ -19,8 +19,8 @@ public class DrawPointActivity extends OpenGLESActivity {
     };
 
     @Override
-    public void DrawScene(GL10 gl) {
-        super.DrawScene(gl);
+    public void drawScene(GL10 gl) {
+        super.drawScene(gl);
         ByteBuffer buffer = ByteBuffer.allocateDirect(vertexArray.length * 4);
         buffer.order(ByteOrder.nativeOrder());
         FloatBuffer vertextBuffer = buffer.asFloatBuffer();

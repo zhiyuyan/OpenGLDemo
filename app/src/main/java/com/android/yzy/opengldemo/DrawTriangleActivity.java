@@ -7,15 +7,18 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Created by yzy on 2018/9/26.
+ * Created by yzy on 2018/10/1.
  */
 
-public class DrawLineActivity extends OpenGLESActivity {
+public class DrawTriangleActivity extends OpenGLESActivity {
 
     float vertexArray[] = {
             -0.8f, -0.4f * 1.732f, 0.0f,
-            -0.4f, 0.4f * 1.732f, 0.0f,
             0.0f, -0.4f * 1.732f, 0.0f,
+            -0.4f, 0.4f * 1.732f, 0.0f,
+
+            0.0f, -0.0f * 1.732f, 0.0f,
+            0.8f, -0.0f * 1.732f, 0.0f,
             0.4f, 0.4f * 1.732f, 0.0f
     };
 
@@ -29,16 +32,17 @@ public class DrawLineActivity extends OpenGLESActivity {
 
         ByteBuffer vbb = ByteBuffer.allocateDirect(vertexArray.length * 4);
         vbb.order(ByteOrder.nativeOrder());
-        FloatBuffer vertexBuffer = vbb.asFloatBuffer();
-        vertexBuffer.put(vertexArray);
-        vertexBuffer.position(0);
+        FloatBuffer floatBuffer = vbb.asFloatBuffer();
+        floatBuffer.put(vertexArray);
+        floatBuffer.position(0);
 
         gl.glLoadIdentity();
-        gl.glTranslatef(0f,0f,-4f);
+        gl.glTranslatef(0.0f, 0.0f, -4.0f);
 
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
 
-        gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
+        gl.glVertexPointer(3, GL10.GL_FLOAT, 0 ,floatBuffer);
+
         long now = System.currentTimeMillis();
         if (now - mLastTime > 2000) {
             mLastTime = now;
@@ -48,15 +52,15 @@ public class DrawLineActivity extends OpenGLESActivity {
         switch (index) {
             case 0:
                 gl.glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-                gl.glDrawArrays(GL10.GL_LINES, 0, 4);
+                gl.glDrawArrays(GL10.GL_TRIANGLES, 0, 6);
                 break;
             case 1:
                 gl.glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
-                gl.glDrawArrays(GL10.GL_LINE_STRIP, 0, 4);
+                gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 6);
                 break;
             case 2:
                 gl.glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-                gl.glDrawArrays(GL10.GL_LINE_LOOP, 0, 4);
+                gl.glDrawArrays(GL10.GL_TRIANGLE_FAN, 0, 6);
                 break;
         }
 
