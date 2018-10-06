@@ -61,6 +61,15 @@
                 <category android:name="intent.category.opengl.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DrawSolarSystem"
+            android:label="Draw Solar System">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="intent.category.opengl.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity android:name=".OpenGLESActivity"></activity>
     </application>
 
