@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.android.yzy.opengldemo.render.AirHockeyRenderer;
+import com.android.yzy.opengldemo.render.AirHockeyRendererN;
 
 
 /**
@@ -20,7 +21,7 @@ public class AirHockeyActivity extends Activity {
         GLSurfaceView glSurfaceView = new GLSurfaceView(this);
         // 记得声明使用OpenGL ES 版本
         glSurfaceView.setEGLContextClientVersion(2);
-        glSurfaceView.setRenderer(new AirHockeyRenderer(this));
+        glSurfaceView.setRenderer(new AirHockeyRendererN(this));
         setContentView(glSurfaceView);
     }
 
